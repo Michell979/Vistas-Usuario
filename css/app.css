@@ -1,0 +1,209 @@
+
+:root{
+    --bs-blue: #073855;
+    --bs-green:#0bb10b;
+}
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+h1,h2,h3{
+    font-family: 'Playfair Display', serif;
+}
+h1{
+    font-size: 4.8rem;
+}
+@media (min-width: 768px) {
+    h1{
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 768px){
+    .hero{
+        height: 55rem;
+    }
+}
+h2{
+    font-size: 3.2em;
+}
+@media (min-width: 768px){
+    h2{
+        font-size: 4rem;
+    }
+
+}
+
+h3{
+    font-size: 2.4em;
+}
+@media (min-width: 768px){
+    h2{
+        font-size: 3rem;
+    }
+
+}
+
+/* reescribir colores */
+.text-primary ,.nombre-sitio{
+    color: var(--bs-blue)!important;
+}
+.btn-success{
+    background-color: var(--bs-green)!important;
+}
+.bg-primary, .btn-primary{
+    background-color: var(--bs-blue)!important;
+}
+header{
+    background-image: url(../img/fondohojitas.jpg);
+}
+.hero{
+    background-image: url(../img/fondoPastel\ -\ copia.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+
+     }
+     @media (min-width: 768px) {  
+            .header-lavanda{
+
+                display: none;
+                display: block;
+                position: absolute;
+                left: 0px;
+                bottom: 0;
+                 animation: move 2s 0s ease-in-out;
+           
+                 
+              }
+            }
+
+    /* //ANIMACION */
+         @keyframes move{
+            0%{
+                opacity: 0;
+                transform: translateX(-10rem);
+            }
+            50%{
+                opacity: 0;
+            }
+
+            100%{
+                opacity: 1;
+                transform: translateX(0);
+            }
+           
+         } 
+         
+   /* .color{
+    background-color: #00639c;
+   } */
+    
+ .card1{
+
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+    float:left;
+ }
+
+ .card1 .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+ }
+
+ .card1 .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+ }
+ .card1 .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ .card1 .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    background-color: #0bb18d;
+    text-align: center;
+
+ }
+ .card1 .back{
+    transform: perspective(600px) rotateY(180deg);
+    background:  white;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+ }
+ .card1 .back h3{
+    margin-top: 20px;
+    letter-spacing: 2px;
+ }
+ .card1 .back img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .card1:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+ }
+ .card1:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+
+
+ }
+
+
+
+
+
+
+@media( min-width: 768px){
+    .producto img{
+        height: 43rem;
+        width: 100%;
+        object-fit: cover;
+
+    }
+}
+.categoria img{
+    transition-property: transform;
+    transition-duration: .3s;
+}
+.categoria img:hover{
+    transform: scale(1.2);
+}
+.galeria li:not(:last-of-type){
+    margin-bottom: 1rem;
+}
+.form-control{
+    padding: 1rem;
+    font-size: 1.6rem;
+}
